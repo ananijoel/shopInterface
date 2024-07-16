@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Index.css">
+    <script src="../js/index.js" type="module"></script>
+    <title>Acceuil</title>
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <script>
+      fetch('/html/header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.querySelector('header').innerHTML = data;
+          })
+  </script>
+    <div class="container">
+
+      <div class="sub_container Welcome">
+        <div class="welcome_Image">
+            <img src="https://i.pinimg.com/564x/60/3d/53/603d538e4ae9bee0ef34db79409303e2.jpg" alt="">
+        </div>
+        <div class="welcome_informations">
+          <div class="welcome_name">
+            The witcher 3 : Wild Hunt
+          </div>
+          <div class="welcome_Desciption">
+            Explorez un monde ouvert immense rempli de monstres à chasser, <br> 
+            de quêtes épiques à entreprendre et de décisions morales <br>
+            à prendre. Un chef-d'œuvre du RPG par CD Projekt Red.
+          </div>
+        </div>
+      </div> 
+
+      <div class="sub_container Video_games" data-type="jeu" >
+        <a href="./html/JeuxVideos.html"  href="./html/" class="sub_container_title" >jeux videos</a>
+        <div class="Item_container">
+        </div>
+      </div>
+      
+
+      <div class="sub_container Consoles" data-type="console">
+        <a href="./html/Consoles.html"  class="sub_container_title" >Consles</a>
+        <div class="Item_container">
+          </div>
+      </div>
+
+      <div class="sub_container Accessories">
+        <a href="./html/accessoires.html"  class="sub_container_title" >accessoires</a>
+      <div class="Item_container">
+        </div>
+      </div>   
+
+      <div class="sub_container PC_Smartphones">
+        <a href="./html/PCSmartphones.html"  class="sub_container_title" >PC master race</a>
+      <div class="Item_container">
+        </div>
+      </div> 
+
+    </div>
+
+    <footer>
+
+    </footer>
+  </body>
+</html>
