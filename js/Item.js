@@ -1,4 +1,4 @@
-import {convertirDate,updatePrixTotal} from './functions.js'
+import {convertirDate} from './functions.js'
 const urlString = window.location.href;
 const url = new URL(urlString);
 const params = new URLSearchParams(url.search);
@@ -13,7 +13,7 @@ let nom = document.querySelector('.name');
 let creation = document.querySelector('.date');
 let description = document.querySelector('.description');
 let types = document.querySelector('.types');
-let quantity = document.querySelector('.quantite input');
+let quantity = document.querySelector('.quantity input');
 let prix = document.querySelector('.prix p:nth-child(2)');
 let button = document.querySelector('.button');
 /*
@@ -37,12 +37,16 @@ fetch(`https://node-game-store-api-e25abde5221a.herokuapp.com/api/Item/${matricu
         creation.innerHTML = convertirDate(new Date(data.updatedAt).toLocaleDateString())
         description.innerHTML = data.description;
         data.category.forEach(type => {
-            console.log(type);
             types.innerHTML += `<div class="${type}">${type}</div>`; 
         });
         quantity.max = data.quantity;
         prix.innerHTML = data.price;
-        let prix_total = updatePrixTotal(quantity.value,data.price)
-        button.innerHTML = `acheter au total de ${prix_total} FCFA`;
-    })
 
+        const updatePrixTotal = () => {
+            let prixTotale = quantity.value * data.price;
+            button.innerHTML = `acheter au total de ${prixTotale} FCFA`;
+            button.setAttribute('href', `https://wa.me/70076829?text= ${data.name} ${data.price} ${quantity.value} ${prixTotale} `);
+        };
+        updatePrixTotal();
+        quantity.addEventListener('input', updatePrixTotal);
+    })

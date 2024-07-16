@@ -115,15 +115,15 @@
 
 }
 
-.quantite{
+.quantity{
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
 }
-.quantite p:first-child{
+.quantity p:first-child{
     color: #9ea3b2;
 }
-.quantite input{
+.quantity input{
     all: unset;
     font-size: 20px;
     width: 100px;
