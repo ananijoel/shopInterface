@@ -220,12 +220,12 @@ footer{
 }
 .welcome_name{
     padding: 10px 0;
-    font-size: 30px;
+    font-size: 25px;
     word-wrap: break-word   ;
 }
 .welcome_Desciption{
     padding: 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
 }
 .welcome_informations{
