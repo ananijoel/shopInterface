@@ -26,6 +26,8 @@ export function fetchAPI(field,value,limit,Htmlelement){
             Item_category.className = 'Item_category'
             Item_category.innerText = element.category[1]
 
+            let hr = document.createElement('hr')
+
             let Item_price = document.createElement('div')
             Item_price.className = 'Item_price'
             Item_price.innerText = element.price+' FCFA'
@@ -39,6 +41,7 @@ export function fetchAPI(field,value,limit,Htmlelement){
             Item_picture.appendChild(Item_picture_img)
             Item.appendChild(Item_name)
             Item.appendChild(Item_category)
+            Item.appendChild(hr)
             Item.appendChild(Item_price)
             Item.appendChild(Item_buy)
             
