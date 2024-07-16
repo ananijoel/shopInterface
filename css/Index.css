@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: robo;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+}
+.header a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.web-map{
+    background-color: #f8f8f8;
+    color: rgb(32, 32, 32);
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 350
+
+}
+.navs{
+    display: flex;
+    flex-direction: row;
+}
+.nav{
+    padding: 0 20px;
+    margin: 0 5px;
+}
+.nav:hover{
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.navOpen{
+    display: none;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 70vh;
+    width: 90vw;
+    margin: 10px;
+    /*-----
+    background-color: #eaeaea;
+    */
+    
+
+}
+.sub_container{
+
+    height: 770px;
+    width: 90vw;
+    margin: 10px;
+}
+.container .Welcome{
+    background-color: #eaeaea;
+    height: 500px;
+    margin-bottom: 10px;
+}
+.sub_container_title{
+    all: unset;
+    color: #475cc4;
+    height: 75px;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 10px 40px;
+    cursor: pointer;
+    
+}
+.sub_container_title:hover{
+    text-decoration: underline;
+
+}
+.Item_container{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 540px;
+}
+.Item{
+    scroll-snap-align: start;
+    background-color: #ffffff;
+    width: fit-content;
+    width: 330px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    margin: 0 40px;
+    
+}
+.Item_picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+}
+.Item_picture img{
+    width: auto;
+    height: 100%;
+}
+.Item_name{
+    padding: 40px 0 0 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.Item_category{
+    padding: 20px 0;
+    font-weight: 300;
+    
+}
+.Item hr{
+    width: 100%;
+    height: 1px;
+    background-color: #33428d;
+}
+.Item_price{
+    color: #33428d ;
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    padding: 20px 0;
+}
+.Item_buy{
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: #33428d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Item_buy:hover{
+    background-color: #475cc4
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    width: 100vw;
+   
+    /*-----*/
+    background-color: #eaeaea;
+}
+
+@media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
+.sub_container_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+    margin-left: 10%;
+}
+.navs{
+    display: none;
+}
+.navs.active{
+    position: fixed;
+    top : 7vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: fit-content;
+    width: 100vw;
+    background-color: white;
+}
+.navs a{
+    margin: 10px;
+    padding: 10px;
+}
+.navOpen{
+    display: flex;
+}
+.navOpen img{
+    height: 30px;
+}
+
+}
