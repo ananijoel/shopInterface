@@ -3,21 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Index.css">
-    <script src="../js/index.js" type="module"></script>
+    <link rel="stylesheet" href="css/Index.css">
+    <script src="js/index.js" type="module"></script>
     <title>Acceuil</title>
   </head>
   <body>
     <header>
-
+      <div class="header">
+        <a  href="index.html"  class="logo">The Anatide Company</a>
+        <div class="navs">
+            <a  href="html/JeuxVideos.html"  class="nav games">Jeux videos</a>
+            <a  href="html/Consoles.html"  class="nav consoles">Consoles</a>
+            <a  href="html/accessoires.html"  class="nav derivative-products">accessoires</a>
+            <a  href="html/PCSmartphones.html"  class="nav fanzone">PC et smartphones</a>
+        </div>
+        <div class="navOpen"><img src="https://www.svgrepo.com/show/324206/menu-hamburger-nav.svg" alt=""></div>
+    </div>
     </header>
-    <script>
-      fetch('/html/header.html')
-          .then(response => response.text())
-          .then(data => {
-              document.querySelector('header').innerHTML = data;
-          })
-  </script>
     <div class="container">
 
       <div class="sub_container Welcome">

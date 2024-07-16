@@ -1,3 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: robo;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    
+}
+
+    header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+    
+}
+.header a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.web-map{
+    background-color: #f8f8f8;
+    color: rgb(32, 32, 32);
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 350
+
+}
+.navs{
+    display: flex;
+    flex-direction: row;
+}
+.nav{
+    padding: 0 20px;
+    margin: 0 5px;
+}
+.nav:hover{
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.navOpen{
+    display: none;
+}
 
 /*---------------------------------------------------------------------------------------------*/
 .container{
@@ -141,7 +214,31 @@ footer{
 }
 
 @media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
-
+    .navs{
+        display: none;
+    }
+    .navs.active{
+        position: fixed;
+        top : 7vh;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: fit-content;
+        width: 100vw;
+        background-color: white;
+    }
+    .navs a{
+        margin: 10px;
+        padding: 10px;
+    }
+    .navOpen{
+        display: flex;
+    }
+    .navOpen img{
+        height: 30px;
+    }
 .sub_container_title{
     display: flex;
     justify-content: center;
@@ -193,12 +290,12 @@ footer{
     width: 100%;
 }
 .welcome_name{
-    padding: 0;
+    padding: 10px 0;
     font-size: 30px;
     word-wrap: break-word   ;
 }
 .welcome_Desciption{
-    padding: 0;
+    padding: 10px;
     font-size: 20px;
     font-weight: 300;
 }

@@ -35,7 +35,7 @@ export function fetchAPI(field,value,limit,Htmlelement){
             let Item_buy = document.createElement('a')
             Item_buy.className = 'Item_buy'
             Item_buy.innerText = 'acheter'
-            Item_buy.setAttribute('href', `/html/Item.html?data=${element.matricule}`)
+            Item_buy.setAttribute('href', `/html/Item.html?data=${element.id}`)
 
             Item.appendChild(Item_picture)
             Item_picture.appendChild(Item_picture_img)
