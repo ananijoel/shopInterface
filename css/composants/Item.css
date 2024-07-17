@@ -206,17 +206,6 @@
     }
 
     
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 20vh;
-    width: 100vw;
-   
-    /*-----*/
-    background-color: #eaeaea;
-}
-
 @media (pointer: coarse) and (orientation: portrait) and (max-width: 700px){
     .Item_pictures{
         display: none;

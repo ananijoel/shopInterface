@@ -36,6 +36,9 @@ header {
     color: black;
     cursor: pointer;
 }
+.logo{
+    font-size: 25px;
+}
 .header {
     display: flex;
     flex-direction: row;
