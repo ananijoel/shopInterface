@@ -8,6 +8,6 @@ function loadHTML(selector, url) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadHTML('header', '../html/header.html');
+    loadHTML('header', '../../html/composants/header.html');
 })
 
